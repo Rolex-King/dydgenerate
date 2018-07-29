@@ -1,0 +1,23 @@
+<header id="cabeceraPrincipal">
+<nav id="menuPrincipal">
+	<ul class="listaPrincipal">
+		<li> <%= link_to "Home", root_path %></li>
+		<a href="https://web.whatsapp.com"><li>Reglas</li></a>
+		<a href="https://sepe.es"><li>Información </li></a>
+	</ul>
+
+<img id='logo' src='<%= asset_path 'logo.png' %>'>
+
+	<ul class="listaPrincipal">
+		<a href="https://www.youtube.com"><li>Información</li></a>
+
+		<% unless user_signed_in? %>
+		<li><%= link_to "Registro", new_user_registration_path %></li>
+		<li><%= link_to "Login", new_user_session_path %></li>
+		<%else%>
+		<li> <%= link_to "Salir", destroy_user_session_path, method: :delete %> </li>
+		<li>Panel(<%= current_user.nickname %>)</li>
+		<%end%>
+	</ul>
+</nav>
+</header>

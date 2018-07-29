@@ -1,5 +1,10 @@
+ body{
+width: 100%;
+background-image: url(https://ewhenson.files.wordpress.com/2016/05/canvas-abstract-hd-wallpaper-2560x1600-1187.jpg?w=1200);
+background-repeat: no-repeat;
+background-size: cover;
 
-
+ }
 .top-space{
 	margin-top: 1.5em;
 }
@@ -13,3 +18,15 @@
 	text-align: center;
 }
 
+
+.top-space-b{
+	margin-top: 5em;
+}
+
+.relative{
+	position: relative;
+}
+
+.absoluto{
+	position: absolute;
+}

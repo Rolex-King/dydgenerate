@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: helvetica;
+}
+
+body{
+	background-image: url(https://ewhenson.files.wordpress.com/2016/05/canvas-abstract-hd-wallpaper-2560x1600-1187.jpg?w=1200);
+background-repeat: no-repeat;
+
+}
+
+#banner{
+	background-color: grey;
+	width: 100%;
+	background-image: url(https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2015/11/dungeons-and-dragons-altspacevr.jpg);
+	/*Con la siguiente instruccion indicaremos que el background ocupe todo el banner*/
+	background-image-height: 100%;
+	background-image-width: 100%;
+
+	background-attachment: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-bottom: 1.2px solid black;
+
+}
+
+#cabeceraPrincipal{
+/*La siguiente linea le indicara que se quede fijo en la parte de arriba
+*/position: fixed;
+
+width: 100%;
+height: 70px;
+background-color: transparent;
+-webkit-transition: background-color .5s;
+	border-left: 3px solid #999999;
+	border-right: 3px solid #999999;
+
+/*Una vez creado y modificado el scroll nos deshacemos de los colores que nos indicaban la posicion
+*/
+/*background-color: red;	
+*/}
+
+#menuPrincipal{
+/*La siguiente linea le indicará al nav, que esta etiqueta se ajuste al contenido que tiene en su interior
+*/	display: table;
+
+	margin: auto;
+/*La siguiente line para que haya algo de separacion entre el header y el navegador
+*/margin-top: 15px;
+height: 40px;
+/*Una vez creado y modificado el scroll nos deshacemos de los colores que nos indicaban la posicion
+*/
+/*background-color: green;
+*/
+-webkit-transition: margin-left .5s;
+
+}
+
+.listaPrincipal{
+
+/*La estructura de un menú siempre será igual
+*/
+/*La siguiente linea es para que tome forma de bloque
+*/display: block;
+/*La siguiente linea es para que se vaya hacia la izquierd ya que en este caso queremos que los dos menus esten alineados horizontalmente
+*/float: left;
+/*La siguiente linea es para quitarle el punto a los elementos li
+*/list-style: none;
+}
+
+.listaPrincipal li{ 
+/*	Para que todos los elementos floten hacia la izquierda y se alineen horizontalmente
+*/	float: left;
+margin: 10px;
+padding: 2px;
+
+}
+
+.listaPrincipal a{
+	font-size: 20px;
+color: black;
+/*Siguiente linea para que el enlace no se subraye
+*/text-decoration: none;
+
+}
+
+.listaPrincipal li{
+	font-size: 20px;
+color: black;
+/*Siguiente linea para que el enlace no se subraye
+*/text-decoration: none;
+
+}
+
+img#logo{
+	float: left;
+/*La siguiente linea hara que el logo actue como un div, como un bloque
+*/	display: block;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 150px;
+	-webkit-transition: width .5s, height .5s, margin-right.5s, margin-top.5s;
+}
+
+
+
+
+
+

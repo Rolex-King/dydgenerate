@@ -1,9 +1,13 @@
-<h2 class="text-center">Log in</h2>
+<%= render '/partials/navigation' %>
 
-<div class="container" style="background-color: yellow;" >
+  <br> <br>  <br> <br>
 
-<div class="row">
+<div class="card text-white bg-dark mb-3 container top-space relative" style="width: 35%;">
+  <div class="card-header" style="width: 100%;"><h1 class="text-center">Login</h1></div>
+  <div class="card-body">
+    <div class="row">
 <div class="col-md-5 col-md-offset-5 container">
+
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-group">
@@ -30,6 +34,7 @@
 
 <%= render "devise/shared/links" %>
 
+</div>
 </div>
 </div>
 </div>
