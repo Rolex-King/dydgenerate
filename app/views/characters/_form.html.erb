@@ -1,0 +1,127 @@
+
+
+<div id="newcharacter" class="top-space-b font-big border-marco brillante" style="background: url(<%= asset_path 'dydwallpaper.jpg'%> );background-repeat: no-repeat;background-size: 100%; ">
+
+
+<%= form_for(@character) do |f| %>
+  <% if @character.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@character.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+      <% @character.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="center width-70p strongtext top-space-b" >
+
+      <div class="form-group inline margin-l-60">
+       <%= f.label :nombre_personaje %><br>
+       <%= f.text_field :nombre_personaje, class:"form-control" %>
+      </div>
+      <div class="form-group inline margin-l-20">
+       <%= f.label :clase %><br>
+       <%= f.text_field :clase, class:"form-control" %>
+      </div>
+      <div class="form-group inline margin-l-20">
+       <%= f.label :raza %><br>
+       <%= f.text_field :raza, class:"form-control" %>
+      </div>
+
+</div>
+
+  <br>
+
+
+
+
+<div class="center width-70p strongtext " >
+
+
+      <div class="form-group inline margin-l-60">
+        <%= f.label :alineamiento %><br>
+        <%= f.text_field :alineamiento, class:"form-control background-gradient-gold" %>
+      </div>
+
+      <div class="form-group inline margin-l-20">
+        <%= f.label :deidad %><br>
+        <%= f.text_field :deidad, class:"form-control" %>
+      </div>
+
+      <div class="form-group inline margin-l-60 form-control-s">
+        <%= f.label :edad %><br>
+        <%= f.text_field :edad, class:"form-control" %>
+      </div>
+
+      <div class="form-group inline  margin-l-40 form-control-m">
+        <%= f.label :sexo %><br>
+        <%= f.text_field :sexo, class:"form-control" %>
+      </div>
+
+</div>
+
+
+<div class="center width-70p strongtext ">
+
+        <div class="form-group inline margin-l-60 ">
+          <%= f.label :tamaño %><br>
+          <%= f.text_field :tamaño, class:"form-control" %>
+        </div>
+ 
+        <div class="form-group inline margin-l-70 form-control-s">
+          <%= f.label :altura %><br>
+          <%= f.text_field :altura, class:"form-control" %>
+        </div>
+
+        <div class="form-group inline margin-l-40 form-control-s">
+          <%= f.label :peso %><br>
+          <%= f.text_field :peso, class:"form-control" %>
+        </div>
+
+          <div class="form-group inline margin-l-70">
+          <%= f.label :rasgos %><br>
+          <%= f.text_field :rasgos, class:"form-control" %>
+          </div>
+
+</div>
+
+
+<div class="center width-70p strongtext">
+
+        <div class="form-group inline margin-l-60">
+          <%= f.label :ojos %><br>
+          <%= f.text_field :ojos, class:"form-control" %>
+        </div>
+
+        <div class="form-group inline margin-l-40">
+          <%= f.label :cabello %><br>
+          <%= f.text_field :cabello, class:"form-control" %>
+        </div>
+
+        <div class="form-group inline margin-l-20">
+          <%= f.label :piel %><br>
+          <%= f.text_field :piel, class:"form-control" %>
+        </div>
+
+</div>
+
+
+<div class="center width-70p strongtext text-center">
+ <div class="form-group inline  container margin-l-20">
+          <%= f.label :history %><br>
+          <%= f.text_area :history, class:"form-control" %>
+        </div>
+      </div>
+
+
+<div class="center width-30p strongtext text-center ">
+  <div class="actions">
+    <%= f.submit "Creación de personaje",class:"btn btn-warning" %>
+  </div>
+<% end %>
+</div>
+</div>

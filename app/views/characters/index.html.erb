@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Characters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Nombre personaje</th>
+      <th>Clase</th>
+      <th>Raza</th>
+      <th>Alineamiento</th>
+      <th>Deidad</th>
+      <th>Tamaño</th>
+      <th>Edad</th>
+      <th>Sexo</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Ojos</th>
+      <th>Cabello</th>
+      <th>Piel</th>
+      <th>History</th>
+      <th>Rasgos</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= character.user %></td>
+        <td><%= character.nombre_personaje %></td>
+        <td><%= character.clase %></td>
+        <td><%= character.raza %></td>
+        <td><%= character.alineamiento %></td>
+        <td><%= character.deidad %></td>
+        <td><%= character.tamaño %></td>
+        <td><%= character.edad %></td>
+        <td><%= character.sexo %></td>
+        <td><%= character.altura %></td>
+        <td><%= character.peso %></td>
+        <td><%= character.ojos %></td>
+        <td><%= character.cabello %></td>
+        <td><%= character.piel %></td>
+        <td><%= character.history %></td>
+        <td><%= character.rasgos %></td>
+        <td><%= link_to 'Show', character %></td>
+        <td><%= link_to 'Edit', edit_character_path(character) %></td>
+        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Character', new_character_path %>
